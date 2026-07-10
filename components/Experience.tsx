@@ -2,7 +2,9 @@
 
 import { Canvas } from '@react-three/fiber';
 import { ScrollControls, Scroll, Stars, AdaptiveDpr, Preload } from '@react-three/drei';
+import { EffectComposer, Bloom, Vignette } from '@react-three/postprocessing';
 import CameraRig from './scene/CameraRig';
+import ShipCompanion from './scene/ShipCompanion';
 import Laboratory from './scene/Laboratory';
 import PortalGate from './scene/PortalGate';
 import SkillsHelix from './scene/SkillsHelix';
@@ -25,6 +27,7 @@ export default function Experience() {
 
         <ScrollControls pages={7} damping={0.18}>
           <CameraRig />
+          <ShipCompanion />
 
           <Laboratory />
 
@@ -55,6 +58,12 @@ export default function Experience() {
         </ScrollControls>
 
         <Stars radius={130} depth={60} count={2400} factor={4} saturation={0} fade speed={0.5} />
+
+        {/* cinematic grade: HDR bloom on all emissive/neon surfaces + vignette */}
+        <EffectComposer multisampling={0}>
+          <Bloom mipmapBlur intensity={0.95} luminanceThreshold={0.85} luminanceSmoothing={0.25} />
+          <Vignette eskil={false} offset={0.18} darkness={0.72} />
+        </EffectComposer>
 
         <AdaptiveDpr pixelated />
         <Preload all />

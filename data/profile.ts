@@ -50,7 +50,7 @@ export const profile = {
   // TODO: correct titles & dates from your LinkedIn export
   experience: [
     {
-      company: 'Zibal · زیبال',
+      company: 'Zibal',
       role: 'Software Engineer',
       period: '2024 — Present',
       points: [
@@ -59,7 +59,7 @@ export const profile = {
       ],
     },
     {
-      company: 'Zhaket · ژاکت',
+      company: 'Zhaket',
       role: 'WordPress Developer',
       period: '2021 — 2023',
       points: [

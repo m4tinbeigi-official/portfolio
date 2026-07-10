@@ -34,6 +34,7 @@ const FRAG = /* glsl */ `
 
     float alpha = smoothstep(1.0, 0.82, r) * (0.35 + 0.65 * bands);
     alpha = max(alpha, core);
+    col *= 1.6; // push into HDR so the bloom pass picks it up
     gl_FragColor = vec4(col, alpha);
   }
 `;

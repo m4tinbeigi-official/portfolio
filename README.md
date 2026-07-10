@@ -4,7 +4,7 @@ Immersive laboratory-themed 3D portfolio for **Rick Sanchez (Matin Beigi)**, bui
 
 ## Stack
 
-Next.js 14 (App Router, static export) · TypeScript · Three.js · @react-three/fiber + drei · GSAP (boot sequence) · Framer Motion (overlay UI) · custom GLSL portal shader.
+Next.js 14 (App Router, static export) · TypeScript · Three.js · @react-three/fiber + drei · @react-three/postprocessing (HDR bloom + vignette) · GSAP (boot sequence) · Framer Motion (overlay UI) · custom GLSL portal shader.
 
 ## Deploy to GitHub Pages (2 minutes)
 
@@ -52,6 +52,7 @@ components/
     path.ts          camera rail (CatmullRom) + floor conduit
     CameraRig.tsx    scroll-driven cinematic camera + parallax
     PortalGate.tsx   GLSL swirl portal + rings
+    ShipCompanion.tsx procedural saucer escort (flies the route with you)
     Laboratory.tsx   grid floor, columns, debris, lights
     Stations.tsx     about globe, timeline panels, pedestals, trophies
     SkillsHelix.tsx  DNA double helix of skills
